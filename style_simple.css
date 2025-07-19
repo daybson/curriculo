@@ -6,15 +6,18 @@
 }
 
 .header__section {
-    margin: 2% 2%;
-    gap: 110px;
+    margin: 2% 0;
+    gap: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 10px;
 }
 
-.header_left {
-    flex: 0.3;    
+.header__left {
+    flex: 0.3;
+    display: flex;
+    justify-content: center;
 }
 
 .header__right {
@@ -25,23 +28,35 @@
 .foto__perfil {
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .25);
 }
 
 .main__estilo__colunas {
     display: flex;
     gap: 3%;
-    
+
 }
 
-.main__coluna__direita{
-    background-color: #869cad;
-    padding: 10px 10px 0px 10px ;
+.main__coluna__direita {
+    background-color: #8ab2ca;
+    color: #1d3557;
+    padding: 10px 10px 0px 10px;
     flex: 0.3;
     margin-left: 0px;
+    border-radius: 8px;
+
 }
+
 .main__coluna__esquerda {
     flex: 0.7;
-    padding: 10px 10px 0px 10px ;
+    padding: 10px 10px 0px 10px;
+}
+
+
+.main__coluna__direita .texto,
+.main__coluna__direita .lista,
+.main__coluna__direita .titulo2__informacoes {
+    color: #1d3557;
 }
 
 .titulo1 {
@@ -49,15 +64,17 @@
     margin-bottom: 2%;
     margin-left: 0px;
     margin-right: 0px;
-    font-family: 'Inter', sans-serif;   
-    font-size: 1.75rem; 
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
     text-transform: uppercase;
+    color: #1d3557;
 }
 
 
 .titulo2__informacoes {
     margin-top: 0px;
     margin-bottom: 1%;
+
     margin-left: 0px;
     margin-right: 0px;
     font-family: 'Inter', sans-serif;
@@ -74,6 +91,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 1.25rem;
     text-transform: uppercase;
+    color: #1d3557;
 }
 
 .titulo3 {
@@ -90,6 +108,7 @@
     font-weight: 300;
     font-size: 1.125rem;
     margin-bottom: 1%;
+    color: #777c81;
 }
 
 .texto {
@@ -114,15 +133,58 @@
 body {
     height: 100vh;
     box-sizing: border-box;
+    padding: 0 1%;
 }
 
-@media(max-width: 700px){
+.link {
+    color: #072ac8;
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: #F4FF52
+}
+
+.tabela__cursos {
+    font-family: 'Roboto', sans-serif;
+    margin: 4px;
+    font-size: 1rem;
+}
+
+.tabela__cursos__curso {
+    width: 40%;
+}
+
+.tabela__cursos__instituicao {
+    width: 50%;
+}
+
+.tabela__cursos__periodo {
+    width: 10%;
+}
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+th {
+    background-color: #1d3557;
+    color: #f1faee;
+}
+
+
+tr:nth-child(even) {
+    background-color: #e7f3fe; 
+}
+
+@media(max-width: 700px) {
     .header__section {
         flex-direction: column;
         gap: 10px;
     }
 
-    .main__estilo__colunas{
+    .main__estilo__colunas {
         display: flex;
         flex-direction: column;
         gap: 2vh;
@@ -132,7 +194,7 @@ body {
     .main__coluna__direita {
         flex: 1;
     }
- 
+
     .titulo1 {
         text-align: center;
     }
@@ -141,4 +203,3 @@ body {
         text-align: center;
     }
 }
-  
