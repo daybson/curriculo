@@ -142,7 +142,7 @@ body {
 }
 
 .link:hover {
-    color: #F4FF52
+    color: #0099ff
 }
 
 .tabela__cursos {
@@ -175,7 +175,7 @@ th {
 
 
 tr:nth-child(even) {
-    background-color: #e7f3fe; 
+    background-color: #e7f3fe;
 }
 
 @media(max-width: 700px) {
@@ -201,5 +201,73 @@ tr:nth-child(even) {
 
     .titulo2 {
         text-align: center;
+    }
+}
+
+@media print {
+/* --- CONFIGURAÇÕES GERAIS DA PÁGINA --- */
+    body {
+        font-size: 10pt; /* Tamanho de fonte ideal para impressão */
+        padding: 0;
+        background-color: #fff; /* Garante fundo branco para economizar tinta */
+    }
+
+    /* --- REMOVER ELEMENTOS DESNECESSÁRIOS --- */
+    .header__left /* Remove a coluna da foto de perfil */
+     { /* Remove a coluna direita com informações de contato */
+        display: none;
+    }
+
+    /* --- AJUSTAR LAYOUT PARA COLUNA ÚNICA --- */
+    .main__estilo__colunas,
+    .header__section {
+        display: block; /* Remove o flexbox, transformando em layout de bloco */
+    }
+    
+    .main__coluna__esquerda {
+        width: 100%; /* Faz a coluna principal ocupar toda a largura */
+        padding: 0;
+    }
+
+    .lista {
+        column-count: 2;
+    }
+
+    /* --- AJUSTES DE FONTES E CORES PARA LEGIBILIDADE --- */
+    * {
+        color: #000 !important; /* Força todo o texto para preto */
+        background-color: transparent !important; /* Remove qualquer cor de fundo */
+        box-shadow: none !important; /* Remove sombras */
+    }
+
+    .titulo1, .titulo2 {
+        text-align: left; /* Alinha os títulos principais à esquerda */
+    }
+
+    /* --- MELHORAR VISIBILIDADE DOS LINKS --- */
+    .link {
+        text-decoration: underline;
+    }
+ 
+
+    /* --- AJUSTES NA TABELA PARA ECONOMIA DE ESPAÇO --- */
+    .tabela__cursos__curso {
+        width: 45%;
+    }
+
+    .tabela__cursos__instituicao {
+        width: 45%;
+    }
+
+    .tabela__cursos__periodo {
+        width: 10%;
+    }
+    
+    th, td {
+        padding: 4px 2px;
+    }
+    
+    tr, th, td {
+        border: 1px solid #ddd; /* Adiciona bordas para melhor visualização */
     }
 }
