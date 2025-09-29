@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --cor-primaria: #2e1d57;
-    --cor-secundaria: #b0a2ff;
+    --cor-primaria: #553997;
+    --cor-secundaria: #d7d1fa;
     --cor-fundo-card: #eeeeee3d;
     --raio-borda: 16px;
     --sombra-media: 0 8px 25px -8px rgba(0, 0, 0, 0.12);
     --raio-borda: 8px;
-    --cor-background: #ffffff;    
+    --cor-background: #ffffff;
 }
 
 * {
@@ -24,22 +24,19 @@ body {
 }
 
 .header__section {
-    margin: 2% 0;
+    margin-bottom: 1rem;
     gap: 3%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0 10px;
+    padding: 1rem;
 }
 
 .header__left {
-    flex: 0.3;
-    display: flex;
-    justify-content: center;
+    flex: 0 0 150px;
 }
 
 .header__right {
-    flex: 0.7;
+    flex: 1;
 }
 
 
@@ -165,6 +162,19 @@ body {
     font-size: 1rem;
 }
 
+.lista__item {
+    margin: 4px;
+}
+
+.lista__colunas {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    margin-right: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
 .link {
     color: #072ac8;
     text-decoration: underline;
@@ -267,6 +277,10 @@ tr:nth-child(even) {
     }
 
     .lista {
+        column-count: 1;
+    }
+
+    .lista__colunas {
         column-count: 2;
     }
 
@@ -317,8 +331,8 @@ tr:nth-child(even) {
         /* Adiciona bordas para melhor visualização */
     }
 
-    .experience-item {     
-        padding: 0;           
+    .experience-item {
+        padding: 0;
         margin-bottom: 0rem;
         border: 0px;
         box-shadow: none;
